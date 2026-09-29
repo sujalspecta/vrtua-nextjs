@@ -21,7 +21,7 @@
     "swiper": "^11.1.14"
   },
   "devDependencies": {
-    "@types/jquery": "^3.5.31",
+    "@types/jquery": "^4.0.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
