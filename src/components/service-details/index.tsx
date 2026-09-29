@@ -40,7 +40,7 @@ const ServiceDetails = () => {
 
   return (
     <>
-      <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
+   
       <div id="smooth-wrapper">
         <div id="smooth-content">
           <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />

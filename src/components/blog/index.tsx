@@ -34,25 +34,30 @@ const Blog = () => {
 
 
 
-  return (
-    <>
-      <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
-          <main>
-            <BlogBreadcrumbs />
-            <BlogArea />
-            <FooterOne />
-          </main>
-        </div>
+ return (
+  <>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <HeaderOne
+          searchOpen={searchOpen}
+          setSearchOpen={setSearchOpen}
+        />
+
+        <main>
+          <BlogBreadcrumbs />
+          <BlogArea />
+          <FooterOne />
+        </main>
       </div>
+    </div>
 
-      <SearchOffcanvas searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
+    <SearchOffcanvas
+      searchOpen={searchOpen}
+      setSearchOpen={setSearchOpen}
+    />
+  </>
+);
 
-
-    </>
-  );
 };
 
 export default Blog;

@@ -43,40 +43,42 @@ const About = () => {
 
 
 
-  return (
-    <>
-      <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-          <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
-          <main>
-            <Breadcrumb title="About Us" />
-            <BrandAbout />
-            <VissionAbout />
-            {/* <TestimonialAreaHomeOne /> */}
-            <TestimonialAbout />
-            <UseitArea setIsVideoOpen={setIsVideoOpen} />
-            <BrandHomeOne />
-            <TeamAreaAbout />
-            <CtaAreaAbout />
-            <FooterOne />
-          </main>
-        </div>
+ return (
+  <>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <HeaderOne
+          searchOpen={searchOpen}
+          setSearchOpen={setSearchOpen}
+        />
+
+        <main>
+          <Breadcrumb title="About Us" />
+          <BrandAbout />
+          <VissionAbout />
+          <TestimonialAbout />
+          <UseitArea setIsVideoOpen={setIsVideoOpen} />
+          <BrandHomeOne />
+          <TeamAreaAbout />
+          <CtaAreaAbout />
+          <FooterOne />
+        </main>
       </div>
+    </div>
 
-      <SearchOffcanvas searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
+    <SearchOffcanvas
+      searchOpen={searchOpen}
+      setSearchOpen={setSearchOpen}
+    />
 
+    <VideoPopup
+      isVideoOpen={isVideoOpen}
+      setIsVideoOpen={setIsVideoOpen}
+      videoId="qmGYnJgCW1o"
+    />
+  </>
+);
 
-      {/* video modal start */}
-      <VideoPopup
-        isVideoOpen={isVideoOpen}
-        setIsVideoOpen={setIsVideoOpen}
-        videoId={"qmGYnJgCW1o"}
-      />
-      {/* video modal end */}
-
-    </>
-  );
 };
 
 export default About;

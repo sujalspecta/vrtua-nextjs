@@ -1,13 +1,12 @@
+"use client";
 
-"use client"
-import HeaderOne from '@/layouts/headers/HeaderOne';
-import FooterOne from '@/layouts/footers/FooterOne';
+import HeaderOne from "@/layouts/headers/HeaderOne";
+import FooterOne from "@/layouts/footers/FooterOne";
 
-// use gsap 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { visibleSlowly } from '@/utils/title-animation';
-import useScrollSmooth from '@/hooks/use-scroll-smooth';
+import { visibleSlowly } from "@/utils/title-animation";
+import useScrollSmooth from "@/hooks/use-scroll-smooth";
 
 import {
   ScrollSmoother,
@@ -15,31 +14,37 @@ import {
   ScrollTrigger,
   SplitText,
 } from "@/plugins";
-import BreadcrumbsBlogDetails from './BreadcrumbsBlogDetails';
-import BlogDetailsArea from './BlogDetailsArea';
-import { useState } from 'react';
-import SearchOffcanvas from '../common/SearchOffcanvas';
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger, ScrollToPlugin, SplitText);
 
+import BreadcrumbsBlogDetails from "./BreadcrumbsBlogDetails";
+import BlogDetailsArea from "./BlogDetailsArea";
+import { useState } from "react";
+import SearchOffcanvas from "../common/SearchOffcanvas";
 
+gsap.registerPlugin(
+  ScrollSmoother,
+  ScrollTrigger,
+  ScrollToPlugin,
+  SplitText
+);
 
 const BlogDetails = () => {
+  useScrollSmooth();
 
-  useScrollSmooth()
   useGSAP(() => {
-    visibleSlowly()
-
+    visibleSlowly();
   });
 
-  const [searchOpen, setSearchOpen] = useState(false)
-
+  const [searchOpen, setSearchOpen] = useState(false);
 
   return (
     <>
-      <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <HeaderOne searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
+          <HeaderOne
+            searchOpen={searchOpen}
+            setSearchOpen={setSearchOpen}
+          />
+
           <main>
             <BreadcrumbsBlogDetails />
             <BlogDetailsArea />
@@ -48,9 +53,10 @@ const BlogDetails = () => {
         </div>
       </div>
 
-      <SearchOffcanvas searchOpen={searchOpen} setSearchOpen={setSearchOpen} />
-
-
+      <SearchOffcanvas
+        searchOpen={searchOpen}
+        setSearchOpen={setSearchOpen}
+      />
     </>
   );
 };
