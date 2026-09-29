@@ -28,6 +28,6 @@
     "eslint": "^10.11.0",
     "eslint-config-next": "^16.3.7",
     "sass-migrator": "^2.6.1",
-    "typescript": "^5"
+    "typescript": "^7.0.2"
   }
 }
