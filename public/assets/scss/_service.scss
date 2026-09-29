@@ -1,0 +1,141 @@
+//Service section Style
+.services-content-wrap {
+	.service-inner {
+		padding: 36px 0;
+		z-index: 1;
+		.arrows-right {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 52px;
+			height: 52px;
+			border: 1px solid $black;
+			border-radius: 50%;
+			transform: rotate(-15deg);
+			transition: all 0.4s;
+			i {
+				font-size: 20px;
+				color: $black;
+			}
+		}
+		.service-hover {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-20%, -50%) rotateX(90deg);
+			transition: all 0.4s;
+		}
+		&:hover {
+			.service-hover {
+				transform: translate(-20%, -50%) rotateX(0deg) rotate(4deg);
+			}
+			.arrows-right {
+				transform: rotate(0deg);
+				background: $p1-clr;
+				border-color: $p1-clr;
+				i {
+					color: $white;
+				}
+			}
+			h3 {
+				a {
+					color: $p1-clr;
+				}
+			}
+		}
+		@include breakpoint(max-xl) {
+			.service-hover {
+				max-width: 250px;
+			}
+		}
+		@include breakpoint(max-xl) {
+			padding: 28px 0;
+			.service-hover {
+				max-width: 200px;
+			}
+			.arrows-right {
+				width: 42px;
+				height: 42px;
+				i {
+					font-size: 17px;
+				}
+			}
+		}
+		@include breakpoint(max-sm) {
+			padding: 24px 0;
+			.service-hover {
+				display: none;
+			}
+		}
+	}
+	.ser-line {
+		background: #000229;
+		width: 100%;
+		height: 1px;
+	}
+}
+.services-wrapper-main {
+	.choose-item {
+		position: relative;
+		z-index: 1;
+		.icon {
+			background: transparent;
+			border: 1px solid rgb(234, 234, 234);
+		}
+		.service-layer {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 0%;
+			height: 100%;
+			z-index: -1;
+			transition: all 0.5s;
+		}
+		&:hover {
+			.service-layer {
+				width: 100%;
+			}
+			h4,
+			p {
+				color: $white;
+			}
+			h4 {
+				a {
+					color: $white;
+				}
+			}
+			.icon {
+				background: $white;
+			}
+			.red {
+				background: $white;
+				color: $black;
+			}
+		}
+		&.stage-one {
+			border-bottom: 1px solid rgb(234, 234, 234);
+		}
+		@include breakpoint(max-xxl) {
+			.icon {
+				img {
+					width: 40px;
+				}
+			}
+		}
+	}
+	.sevice-left-stage {
+		border-left: 1px solid rgb(234, 234, 234);
+	}
+	@include breakpoint(max-lg) {
+		.choose-item {
+			border: 1px solid rgb(234, 234, 234) !important;
+			&.stage-one {
+				border: unset;
+			}
+		}
+		.sevice-left-stage {
+			border: unset;
+		}
+	}
+}
+//Service section Style
