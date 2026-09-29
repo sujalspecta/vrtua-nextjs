@@ -1,5 +1,14 @@
+import "../styles/css/all.min.css";
+import "../styles/css/animate.css";
+import "../styles/css/bootstrap.css";
+import "../styles/css/meanmenu.css";
+import "../styles/css/nice-select.css";
 
- 
+import "swiper/css";
+import "swiper/css/bundle";
+
+import "react-modal-video/css/modal-video.css";
+
 import "../styles/style.scss";
 
 export default function RootLayout({
@@ -9,16 +18,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head> 
-     
+      <head>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         />
       </head>
-      <body>
-        {children}
-      </body>
+
+      <body>{children}</body>
     </html>
   );
 }

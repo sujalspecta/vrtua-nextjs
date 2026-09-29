@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Choose Section
 .choose-bg-adding {
 	z-index: 1;
@@ -18,7 +21,7 @@
 	}
 }
 .choose-wrapper {
-	background: $white;
+	background: variables.$white;
 	border-radius: 10px;
 	display: flex;
 	.choose-line {
@@ -34,7 +37,7 @@
 			transition: all 0.4s;
 			margin: 0 auto 30px;
 			&:hover {
-				background: $p1-clr;
+				background: variables.$p1-clr;
 			}
 		}
 		h4 {
@@ -48,21 +51,21 @@
 			background-color: rgb(247, 249, 251);
 			font-size: 14px;
 			font-weight: 700;
-			color: $black;
+			color: variables.$black;
 			padding: 9px 20px;
 			display: inline-block;
 		}
 		&:hover {
 			.red {
-				background: $p1-clr;
-				color: $white;
+				background: variables.$p1-clr;
+				color: variables.$white;
 			}
 			.icon {
-				background: $p1-clr;
+				background: variables.$p1-clr;
 			}
 		}
 	}
-	@include breakpoint(max-xxl) {
+	@include mixins.breakpoint(max-xxl) {
 		.choose-line {
 			height: 380px;
 		}
@@ -86,14 +89,14 @@
 			}
 		}
 	}
-	@include breakpoint(max-lg) {
+	@include mixins.breakpoint(max-lg) {
 		display: grid;
 		grid-template-columns: auto auto auto auto;
 		.choose-line {
 			height: initial;
 		}
 	}
-	@include breakpoint(max-sm) {
+	@include mixins.breakpoint(max-sm) {
 		grid-template-columns: 100%;
 		.choose-item {
 			border: 1px solid #eaeaea;
@@ -111,13 +114,13 @@
 	h3 {
 		max-width: 800px;
 		margin: 0 auto 60px;
-		@include breakpoint(max-xxl) {
+		@include mixins.breakpoint(max-xxl) {
 			margin: 0 auto 40px;
 		}
-		@include breakpoint(max-lg) {
+		@include mixins.breakpoint(max-lg) {
 			margin: 0 auto 30px;
 		}
-		@include breakpoint(max-md) {
+		@include mixins.breakpoint(max-md) {
 			margin: 0 auto 24px;
 		}
 	}

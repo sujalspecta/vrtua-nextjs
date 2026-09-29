@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Service section Style
 .services-content-wrap {
 	.service-inner {
@@ -9,13 +12,13 @@
 			justify-content: center;
 			width: 52px;
 			height: 52px;
-			border: 1px solid $black;
+			border: 1px solid variables.$black;
 			border-radius: 50%;
 			transform: rotate(-15deg);
 			transition: all 0.4s;
 			i {
 				font-size: 20px;
-				color: $black;
+				color: variables.$black;
 			}
 		}
 		.service-hover {
@@ -31,24 +34,24 @@
 			}
 			.arrows-right {
 				transform: rotate(0deg);
-				background: $p1-clr;
-				border-color: $p1-clr;
+				background: variables.$p1-clr;
+				border-color: variables.$p1-clr;
 				i {
-					color: $white;
+					color: variables.$white;
 				}
 			}
 			h3 {
 				a {
-					color: $p1-clr;
+					color: variables.$p1-clr;
 				}
 			}
 		}
-		@include breakpoint(max-xl) {
+		@include mixins.breakpoint(max-xl) {
 			.service-hover {
 				max-width: 250px;
 			}
 		}
-		@include breakpoint(max-xl) {
+		@include mixins.breakpoint(max-xl) {
 			padding: 28px 0;
 			.service-hover {
 				max-width: 200px;
@@ -61,7 +64,7 @@
 				}
 			}
 		}
-		@include breakpoint(max-sm) {
+		@include mixins.breakpoint(max-sm) {
 			padding: 24px 0;
 			.service-hover {
 				display: none;
@@ -97,25 +100,25 @@
 			}
 			h4,
 			p {
-				color: $white;
+				color: variables.$white;
 			}
 			h4 {
 				a {
-					color: $white;
+					color: variables.$white;
 				}
 			}
 			.icon {
-				background: $white;
+				background: variables.$white;
 			}
 			.red {
-				background: $white;
-				color: $black;
+				background: variables.$white;
+				color: variables.$black;
 			}
 		}
 		&.stage-one {
 			border-bottom: 1px solid rgb(234, 234, 234);
 		}
-		@include breakpoint(max-xxl) {
+		@include mixins.breakpoint(max-xxl) {
 			.icon {
 				img {
 					width: 40px;
@@ -126,7 +129,7 @@
 	.sevice-left-stage {
 		border-left: 1px solid rgb(234, 234, 234);
 	}
-	@include breakpoint(max-lg) {
+	@include mixins.breakpoint(max-lg) {
 		.choose-item {
 			border: 1px solid rgb(234, 234, 234) !important;
 			&.stage-one {

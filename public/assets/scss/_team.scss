@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Team style
 .team-items{
     text-align: center;
@@ -27,7 +30,7 @@
             }
             &:hover{
                 i{
-                    color: $p1-clr;
+                    color: variables.$p1-clr;
                 }
             }
         }
@@ -37,11 +40,11 @@
         transform: translateY(5px);
         h4{
             a{
-                color: $p1-clr;
+                color: variables.$p1-clr;
             }
         }
     }
-    @include breakpoint(max-xxl){
+    @include mixins.breakpoint(max-xxl){
         padding: 30px 18px;
         .thumb{
             margin: 0 auto 24px;
@@ -53,12 +56,12 @@
     top: 120px;
     right: 90px;
     animation: rots 2s linear infinite;
-    @include breakpoint(max-xl){
+    @include mixins.breakpoint(max-xl){
         top: 30px;
         right: 30px;
         width: 150px;
     }
-    @include breakpoint(max-sm){
+    @include mixins.breakpoint(max-sm){
         top: 10px;
         right: 10px;
         width: 100px;

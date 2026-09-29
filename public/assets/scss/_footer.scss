@@ -1,3 +1,7 @@
+@use "mixins";
+@use "typography";
+@use "variables";
+
 .footer-section {
 	position: relative;
 	.footer-top {
@@ -21,11 +25,11 @@
 					a {
 						font-size: 18px;
 						font-weight: 500;
-						color: $white;
+						color: variables.$white;
 						transition: all 0.4s;
 						&:hover {
 							text-decoration: underline;
-							color: $p2-clr;
+							color: variables.$p2-clr;
 						}
 					}
 				}
@@ -35,7 +39,7 @@
 				align-items: center;
 				border-radius: 8px;
 				padding: 8px;
-				background: $black2;
+				background: variables.$black2;
 				input {
 					width: 100%;
 					color: rgb(95, 97, 104);
@@ -50,8 +54,8 @@
 			.pragraph-widget {
 				p {
 					font-size: 24px;
-					font-family: $sub-font;
-					color: $white;
+					font-family: typography.$sub-font;
+					color: variables.$white;
 					line-height: 34px;
 				}
 				a{
@@ -99,7 +103,7 @@
 		left: 180px;
 		animation: rots 2s linear infinite;
 	}
-	@include breakpoint(max-xxl) {
+	@include mixins.breakpoint(max-xxl) {
 		.footer-top {
 			padding: 80px 0 90px;
 			.footer-widget {
@@ -138,7 +142,7 @@
 			}
 		}
 	}
-	@include breakpoint(max-md) {
+	@include mixins.breakpoint(max-md) {
 		.footer-top {
 			padding: 70px 0 80px;
 			.footer-widget {

@@ -13,7 +13,7 @@ const BrandHomeOne = () => {
         <div className="partnered-wrapper swiper">
           <Swiper
             speed={6000}
-            loop={true}
+            loop={false}
             slidesPerView={"auto"}
             centeredSlides={true}
             modules={[Autoplay]}

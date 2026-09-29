@@ -1,3 +1,7 @@
+@use "mixins";
+@use "typography";
+@use "variables";
+
 //Global Social
 .social-wrapper {
 	a {
@@ -118,67 +122,67 @@
 
 //Color Define
 .black-clr {
-	color: $black;
+	color: variables.$black;
 }
 .black-bg {
-	background: $black;
+	background: variables.$black;
 }
 .black2 {
-	color: $black2;
+	color: variables.$black2;
 }
 .black2-bg {
-	background: $black2;
+	background: variables.$black2;
 }
 .white-clr {
-	color: $white;
+	color: variables.$white;
 }
 .white-bg {
-	background: $white;
+	background: variables.$white;
 }
 .p1-clr {
-	color: $p1-clr;
+	color: variables.$p1-clr;
 }
 .p1-bg {
-	background: $p1-clr;
+	background: variables.$p1-clr;
 }
 .p2-clr {
-	color: $p2-clr;
+	color: variables.$p2-clr;
 }
 .p2-bg {
-	background: $p2-clr;
+	background: variables.$p2-clr;
 }
 .pra-clr {
-	color: $pra;
+	color: variables.$pra;
 }
 .pra-bg {
-	background: $pra;
+	background: variables.$pra;
 }
 .pra2-clr {
-	color: $pra2;
+	color: variables.$pra2;
 }
 .pra2-bg {
-	background: $pra2;
+	background: variables.$pra2;
 }
 .bg-clr {
-	color: $bg-color;
+	color: variables.$bg-color;
 }
 .bg-bg {
-	background: $bg-color;
+	background: variables.$bg-color;
 }
 .cmnbg-clr {
-	color: $cmnbg;
+	color: variables.$cmnbg;
 }
 .cmnbg-bg {
-	background: $cmnbg;
+	background: variables.$cmnbg;
 }
 .border-clr {
-	color: $border-color;
+	color: variables.$border-color;
 }
 .border-bg {
-	background: $border-color;
+	background: variables.$border-color;
 }
 .ratting {
-	color: $ratting;
+	color: variables.$ratting;
 }
 .before-none{
 	&::before{
@@ -189,10 +193,10 @@
 //Font Size
 .fs-four {
 	font-size: 24px;
-	@include breakpoint(max-xl) {
+	@include mixins.breakpoint(max-xl) {
 		font-size: 20px;
 	}
-	@include breakpoint(max-lg) {
+	@include mixins.breakpoint(max-lg) {
 		font-size: 18px;
 	}
 }
@@ -262,10 +266,10 @@
 			color: rgb(0, 2, 41);
 			font-size: 14px;
 			font-weight: 600;
-			font-family: $sub-font;
+			font-family: typography.$sub-font;
 		}
 	}
-	@include breakpoint(max-xxxl) {
+	@include mixins.breakpoint(max-xxxl) {
 		li {
 			a {
 				background-color: rgb(255, 255, 255);
@@ -273,7 +277,7 @@
 				color: rgb(0, 2, 41);
 				font-size: 12px;
 				font-weight: 600;
-				font-family: $sub-font;
+				font-family: typography.$sub-font;
 			}
 		}
 	}
@@ -328,16 +332,16 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 5px;
-			background: $black;
+			background: variables.$black;
 			transition: all 0.4s;
 			font-size: 24px;
-			color: $white;
+			color: variables.$white;
 			font-weight: 600;
 			&.active,
 			&:hover{
-				background: $p1-clr;
+				background: variables.$p1-clr;
 			}
-			@include breakpoint(max-xxl){
+			@include mixins.breakpoint(max-xxl){
 				width: 45px;
 				height: 45px;
 				font-size: 18px;

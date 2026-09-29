@@ -28,7 +28,7 @@ const BlogBreadcrumbs = () => {
             <div className="blog-wrapper-slider swiper">
               <Swiper
                 speed={1500}
-                loop={true}
+                loop={false}
                 modules={[Autoplay, Navigation]}
                 autoplay={{
                   delay: 1000,

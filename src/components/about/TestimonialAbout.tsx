@@ -27,7 +27,7 @@ const TestimonialAbout = () => {
             <Swiper
               spaceBetween={30}
               speed={1500}
-              loop={true}
+              loop={false}
               autoplay={{
                 delay: 1000,
                 disableOnInteraction: false,

@@ -1,20 +1,23 @@
+@use "mixins";
+@use "variables";
+
 //All Feature
 .play-in {
 	width: 124px;
 	height: 124px;
 	position: absolute;
 	transition: all 0.4s;
-	@include breakpoint(max-md) {
+	@include mixins.breakpoint(max-md) {
 		width: 75px;
 		height: 75px;
 	}
-	@include breakpoint(max-sm) {
+	@include mixins.breakpoint(max-sm) {
 		width: 65px;
 		height: 65px;
 	}
 	&:hover{
-		background: $p1-clr;
-		color: $white;
+		background: variables.$p1-clr;
+		color: variables.$white;
 	}
 }
 //All Feature
@@ -35,11 +38,11 @@
 			content: "";
 			width: 100%;
 			height: 100%;
-			background: $white;
+			background: variables.$white;
 			border-radius: 50%;
 			animation: puls 2s linear infinite;
 		}
-		@include breakpoint(max-xl) {
+		@include mixins.breakpoint(max-xl) {
 			width: 70px;
 			height: 70px;
 			i {
@@ -72,7 +75,7 @@
 }
 .call-useit {
 	.icon {
-		border: 1px solid $black;
+		border: 1px solid variables.$black;
 		width: 48px;
 		height: 48px;
 		display: flex;
@@ -97,24 +100,24 @@
 			display: flex;
 			align-items: center;
 			gap: 24px;
-			background: $white;
+			background: variables.$white;
 			.icon {
 				width: 110px;
 				min-width: 110px;
 				height: 120px;
-				background: $black;
+				background: variables.$black;
 				transition: all 0.4s;
 			}
 			&:hover {
 				.icon {
-					background: $p1-clr;
+					background: variables.$p1-clr;
 				}
 			}
 		}
 	}
 	padding: 55px 0 0 60px;
-	background: $white;
-	@include breakpoint(max-xxl) {
+	background: variables.$white;
+	@include mixins.breakpoint(max-xxl) {
 		padding: 24px 0 0 24px;
 		.mission-box-inner {
 			gap: 18px;
@@ -132,7 +135,7 @@
 			}
 		}
 	}
-	@include breakpoint(max-md) {
+	@include mixins.breakpoint(max-md) {
 		padding: 18px 0 0 18px;
 		.mission-box-inner {
 			gap: 14px;
@@ -150,7 +153,7 @@
 			}
 		}
 	}
-	@include breakpoint(max-sm) {
+	@include mixins.breakpoint(max-sm) {
 		padding: 18px 0 0 18px;
 		.mission-box-inner {
 			gap: 14px;
@@ -168,7 +171,7 @@
 	}
 }
 .vissiton-thumb{
-	@include breakpoint(max-lg){
+	@include mixins.breakpoint(max-lg){
 		width: 100%;	
 		img{
 			width: 100%;

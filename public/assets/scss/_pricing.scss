@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Pricing Section
 .pricing-section {
 	background: url(../../assets/img/element/pricing-bg.png) no-repeat center
@@ -19,14 +22,14 @@
 		margin-bottom: 30px;
 	}
 	p {
-		border-bottom: 1px solid $white;
+		border-bottom: 1px solid variables.$white;
 		padding-bottom: 30px;
 		margin-bottom: 30px;
 	}
 	&.regular-pack {
 		border: 1px solid #a27af2;
 	}
-	@include breakpoint(max-xxl) {
+	@include mixins.breakpoint(max-xxl) {
 		padding: 36px 28px;
 		.basic-title {
 			margin-bottom: 20px;

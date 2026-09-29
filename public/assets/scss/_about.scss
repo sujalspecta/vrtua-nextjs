@@ -1,3 +1,7 @@
+@use "mixins";
+@use "typography";
+@use "variables";
+
 .about-thumbs {
 	display: flex;
 	gap: 24px;
@@ -20,24 +24,24 @@
 			.count-item {
 				font-size: 70px;
 				font-weight: 700;
-				color: $white;
+				color: variables.$white;
 			}
 			span {
 				font-size: 60px;
 				font-weight: 700;
 				line-height: 50px;
-				color: $white;
+				color: variables.$white;
 			}
 			p {
 				font-size: 20px;
 				font-weight: 500;
-				font-family: $sub-font;
+				font-family: typography.$sub-font;
 				line-height: 28px;
-				color: $white;
+				color: variables.$white;
 			}
 		}
 	}
-	@include breakpoint(max-xxl) {
+	@include mixins.breakpoint(max-xxl) {
 		gap: 20px;
 		align-items: self-end;
 		.thumb-inner {
@@ -51,7 +55,7 @@
 				.count-item {
 					font-size: 36px;
 					font-weight: 700;
-					color: $white;
+					color: variables.$white;
 				}
 				p {
 					font-size: 14px;
@@ -60,7 +64,7 @@
 			}
 		}
 	}
-	@include breakpoint(max-xxsmall) {
+	@include mixins.breakpoint(max-xxsmall) {
 		gap: 10px;
 		.thumb-inner {
 			gap: 10px;
@@ -70,7 +74,7 @@
 				.count-item {
 					font-size: 28px;
 					font-weight: 700;
-					color: $white;
+					color: variables.$white;
 				}
 				p {
 					font-size: 12px;

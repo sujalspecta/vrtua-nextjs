@@ -12,7 +12,7 @@ const HeroArea = ({setIsVideoOpen} : any) => {
       <section className="banner-section position-relative cmn-bg swiper">
         <Swiper
           slidesPerView={1}
-          loop={true}
+          loop={false}
           speed={1300}
           effect="fade"
           autoplay={{

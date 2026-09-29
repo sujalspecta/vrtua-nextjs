@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Faqs ...
 .faq-section {
 	background: url(../../assets/img/element/faq-bg1.png) no-repeat center center;
@@ -8,16 +11,16 @@
 		border: 0;
 		border-radius: 10px;
 		overflow: hidden;
-		background-color: $white;
+		background-color: variables.$white;
 		.accordion-header {
 			.accordion-button {
 				font-weight: 700;
-				color: $p1-clr;
+				color: variables.$p1-clr;
 				letter-spacing: -0.2px;
 				border: 0;
 				border-radius: 0;
 				box-shadow: none;
-				background-color: $white;
+				background-color: variables.$white;
 				padding: 18px 30px;
 				text-transform: capitalize;
 				font-size: 20px;
@@ -27,12 +30,12 @@
 					font-family: "Font Awesome 6 Free";
 					font-weight: 500;
 					transition: all 0.3s ease-in-out !important;
-					color: $white;
+					color: variables.$white;
 					width: 32px;
 					height: 32px;
 					font-size: 25px;
 					border-radius: 8px;
-					background: $black;
+					background: variables.$black;
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -45,11 +48,11 @@
 						content: "";
 						font-weight: 500;
 						transform: rotate(0);
-						color: $p1-clr;
+						color: variables.$p1-clr;
 						width: 32px;
 						height: 32px;
 						border-radius: 8px;
-						background-color: $black;
+						background-color: variables.$black;
 						display: flex;
 						align-items: center;
 						justify-content: center;
@@ -58,9 +61,9 @@
 				&.collapsed {
 					background-color: transparent;
 					padding: 18px 30px;
-					color: $black;
+					color: variables.$black;
 				}
-				@include breakpoint(max-xxl) {
+				@include mixins.breakpoint(max-xxl) {
 					padding: 16px 20px;
 					font-size: 17px;
 					line-height: 26px;
@@ -76,17 +79,17 @@
 				padding-right: 130px;
 				padding-left: 30px;
 				padding-top: 15px;
-				color: $black;
-				background-color: $white;
+				color: variables.$black;
+				background-color: variables.$white;
 				padding-bottom: 25px;
 				border-top: 1px solid #ccccd4;
 
-				@include breakpoint(max-xxl) {
+				@include mixins.breakpoint(max-xxl) {
 					padding-right: 50px;
 					padding-left: 20px;
 				}
 
-				@include breakpoint(max-lg) {
+				@include mixins.breakpoint(max-lg) {
 					padding-right: 30px;
 				}
 			}
@@ -103,7 +106,7 @@
 		width: 4px;
 		height: 565px;
 		border-radius: 8px;
-		background: $black;
+		background: variables.$black;
 		margin: 0 auto;
 		position: relative;
 		z-index: 1;
@@ -112,7 +115,7 @@
 			left: 1px;
 			top: 4px;
 			content: "";
-			background: $p2-clr;
+			background: variables.$p2-clr;
 			height: 40%;
 			width: 2px;
 		}
@@ -143,13 +146,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			background: $p1-clr;
+			background: variables.$p1-clr;
 			i {
-				color: $white;
+				color: variables.$white;
 				font-size: 18px;
 			}
 		}
-		@include breakpoint(max-lg){
+		@include mixins.breakpoint(max-lg){
 			padding: 4px;
 			input{
 				padding: 10px 16px;

@@ -1,3 +1,6 @@
+@use "typography";
+@use "variables";
+
 .preloader {
 	align-items: center;
 	cursor: default;
@@ -17,7 +20,7 @@
 			animation: spinner 1s infinite linear;
 			border-radius: 50%;
 			border: 3px solid rgba(0, 0, 0, 0.2);
-			border-top-color: $p1-clr;
+			border-top-color: variables.$p1-clr;
 			height: 9em;
 			margin: 0 auto 3.5em auto;
 			width: 9em;
@@ -30,7 +33,7 @@
 		}
 
 		.txt-loading {
-			font: bold 5em $heading-font, $body-font;
+			font: bold 5em typography.$heading-font, typography.$body-font;
 			text-align: center;
 			user-select: none;
 
@@ -39,7 +42,7 @@
 			}
 
 			.letters-loading {
-				color: $p1-clr;
+				color: variables.$p1-clr;
 				position: relative;
 
 				&:nth-child(2):before {
@@ -72,11 +75,11 @@
 
 				&::before {
 					animation: letters-loading 4s infinite;
-					color: $black;
+					color: variables.$black;
 					content: attr(data-text-preloader);
 					left: 0;
 					opacity: 0;
-					font-family: $heading-font;
+					font-family: typography.$heading-font;
 					position: absolute;
 					top: -3px;
 					transform: rotateY(-90deg);
@@ -90,7 +93,7 @@
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 8px;
-		color: $p1-clr;
+		color: variables.$p1-clr;
 	}
 
 	.loader {
@@ -111,7 +114,7 @@
 			padding: 0px;
 
 			.bg {
-				background-color: $bg-color;
+				background-color: variables.$bg-color;
 				height: 100%;
 				left: 0;
 				width: 100%;
@@ -183,8 +186,8 @@
 	text-transform: capitalize;
 	background: transparent;
 	font-size: 25px;
-	color: $p1-clr;
-	border-bottom: 2px solid $p1-clr;
+	color: variables.$p1-clr;
+	border-bottom: 2px solid variables.$p1-clr;
 	text-align: center;
 	letter-spacing: 2px;
 }
@@ -199,11 +202,11 @@
 
 .search-wrap input.form-control,
 .search-wrap input.form-control:focus {
-	background-color: $p1-clr;
+	background-color: variables.$p1-clr;
 }
 
 input.main-search-input::placeholder {
-	color: $p1-clr;
+	color: variables.$p1-clr;
 	opacity: 1;
 	font-size: 25px;
 }
@@ -217,7 +220,7 @@ input.main-search-input::placeholder {
 	top: 50px;
 	right: 50px;
 	font-size: 30px;
-	color: $p1-clr;
+	color: variables.$p1-clr;
 	cursor: pointer;
 }
 
@@ -236,7 +239,7 @@ input.main-search-input::placeholder {
 	width: 6px;
 	height: 6px;
 	z-index: 10000001;
-	background-color: $p1-clr;
+	background-color: variables.$p1-clr;
 	-webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
 		margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 	-o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
@@ -249,7 +252,7 @@ input.main-search-input::placeholder {
 	margin-top: -35px;
 	width: 70px;
 	height: 70px;
-	background-color: $p1-clr;
+	background-color: variables.$p1-clr;
 	opacity: 0.3;
 }
 .cursor-outer {
@@ -257,7 +260,7 @@ input.main-search-input::placeholder {
 	margin-top: -12px;
 	width: 30px;
 	height: 30px;
-	border: 1px solid $p1-clr;
+	border: 1px solid variables.$p1-clr;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 	z-index: 10000000;

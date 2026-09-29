@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Hero style
 .banner-section{
     position: relative;
@@ -5,7 +8,7 @@
         max-width: 650px;
         padding: 40px 40px;
         position: absolute;
-        background: $white;
+        background: variables.$white;
         display: flex;
         align-items: center;
         gap: 24px;
@@ -15,7 +18,7 @@
         .line{
             width: 100px;
             height: 2px;
-            background: $pra;
+            background: variables.$pra;
         }
         .array-button{
             button{
@@ -23,11 +26,11 @@
                 height: 40px;
                 border-radius: 50%;
                 line-height: 40px;
-                border: 1px solid $p1-clr;
+                border: 1px solid variables.$p1-clr;
             }
         }
     }
-    @include breakpoint(max-lg){
+    @include mixins.breakpoint(max-lg){
         .banner-controller{
             position: initial;
             margin: 0 auto;
@@ -75,7 +78,7 @@
             top: 50px;
             animation: rots 2s linear infinite;
         }
-        @include breakpoint(max-sm){
+        @include mixins.breakpoint(max-sm){
             .hero-text-element{
                 width: 120px;
                 top: 140px;
@@ -99,7 +102,7 @@
         background-size: cover;
         z-index: -1;
     }
-    @include breakpoint(max-lg){
+    @include mixins.breakpoint(max-lg){
         &::before{
             height: 100%;
         }

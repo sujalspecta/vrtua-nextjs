@@ -26,7 +26,7 @@ const CtaAreaHomeOne = ({ style_2, style_3, style_4 }: any) => {
                     <Swiper
                       spaceBetween={30}
                       speed={1500}
-                      loop={true}
+                      loop={false}
                       centeredSlides={true}
                       modules={[Autoplay, Navigation]}
                       autoplay={{

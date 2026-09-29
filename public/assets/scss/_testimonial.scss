@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //Testimonial section style
 .testimonial-section{
     background: url(../../assets/img/element/testimonial-bg.png) no-repeat center center;
@@ -11,14 +14,14 @@
             background-color: rgba(255, 255, 255, 0.102);
             border-radius: 50%;
             i{
-                color: $white;
+                color: variables.$white;
                 font-size: 18px;
             }
             &.active,
             &:hover{
-                background: $p2-clr;
+                background: variables.$p2-clr;
                 i{
-                    color: $black;
+                    color: variables.$black;
                 }
             }
         }
@@ -29,7 +32,7 @@
         left: 50%;
         transform: translateX(-50%);
     }
-    @include breakpoint(max-xxl){
+    @include mixins.breakpoint(max-xxl){
         .array-button{
             button{
                 width: 40px;
@@ -43,19 +46,19 @@
     display: flex;
     align-items: center;
     gap: 24px;
-    background: $white;
+    background: variables.$white;
     border-radius: 12px;
     padding: 35px 24px;
     .testimonial-content{
         p{
             font-style: italic;
-            color: $black;
+            color: variables.$black;
             font-size: 18px;
             font-weight: 600;
             margin-bottom: 28px;
         }
     }
-    @include breakpoint(max-xxxl){
+    @include mixins.breakpoint(max-xxxl){
         gap: 16px;
         padding: 28px 19px;
         .testimonial-content{
@@ -66,12 +69,12 @@
             }
         }
     }
-    @include breakpoint(max-xl){
+    @include mixins.breakpoint(max-xl){
         .thumb{
             width: 190px;
         }
     }
-    @include breakpoint(max-lg){
+    @include mixins.breakpoint(max-lg){
         flex-wrap: wrap;
         .thumb{
             max-width: 200px;

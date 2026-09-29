@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 //>>>>> Component Button Here <<<<<//
 
 //Btn Theme
@@ -11,9 +14,9 @@
 		z-index: 1;
 	}
 	&:hover {
-		color: $black;
+		color: variables.$black;
 	}
-	@include breakpoint(max-xxl){
+	@include mixins.breakpoint(max-xxl){
 		padding: 16px 24px;
 	}
 }
@@ -56,21 +59,21 @@
 		width: 0;
 		height: 0;
 		border-radius: 10px;
-		background-color: $p1-clr;
+		background-color: variables.$p1-clr;
 		transition: all 0.7s ease;
 		z-index: -1;
 	}
 }
 .box-style.first-box {
 	&::before {
-		background-color: $p2-clr;
+		background-color: variables.$p2-clr;
 	}
 	&:hover {
 		i {
-			color: $black;
+			color: variables.$black;
 		}
 		span {
-			color: $black;
+			color: variables.$black;
 		}
 	}
 }

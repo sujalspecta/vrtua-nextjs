@@ -1,3 +1,6 @@
+@use "mixins";
+@use "variables";
+
 .mean-container a.meanmenu-reveal {
 	display: none;
 }
@@ -21,22 +24,22 @@
 	display: block !important;
 
 	.homemenu-items {
-		@include flex;
+		@include mixins.flex;
 		gap: 30px;
 		justify-content: space-between;
 
-		@include breakpoint(max-xl) {
+		@include mixins.breakpoint(max-xl) {
 			flex-wrap: wrap;
 		}
 
 		.homemenu {
 			position: relative;
 
-			@include breakpoint(max-xl) {
+			@include mixins.breakpoint(max-xl) {
 				max-width: 300px;
 				text-align: center;
 				margin: 0 auto;
-				border: 1px solid $border-color;
+				border: 1px solid variables.$border-color;
 				padding: 10px;
 			}
 
@@ -55,19 +58,19 @@
 					flex-direction: column;
 					opacity: 0;
 					visibility: hidden;
-					@include transition;
+					@include mixins.transition;
 					margin-top: 20px;
 
 					.theme-btn {
 						padding: 12px 20px;
-						color: $white !important;
+						color: variables.$white !important;
 						width: initial;
 						font-size: 16px;
 						text-align: center;
 						border-radius: 0;
 
 						&:hover {
-							color: $white !important;
+							color: variables.$white !important;
 						}
 					}
 				}
@@ -139,23 +142,23 @@
 .mean-container .mean-nav ul li a {
 	width: 100%;
 	padding: 10px 0;
-	color: $black;
+	color: variables.$black;
 	font-size: 16px;
 	line-height: 1.5;
 	font-weight: 500;
 	text-transform: capitalize;
-	border-bottom: 1px solid $border-color !important;
+	border-bottom: 1px solid variables.$border-color !important;
 	border: none;
 
 	&:hover {
-		color: $p1-clr;
+		color: variables.$p1-clr;
 	}
 }
 .mean-container .mean-nav ul li a:last-child {
 	border-bottom: 0;
 }
 .mean-container .mean-nav ul li a:hover {
-	color: $p1-clr;
+	color: variables.$p1-clr;
 }
 
 .mean-container .mean-nav ul li a.mean-expand {
@@ -182,7 +185,7 @@
 	-moz-transform: rotate(45deg);
 	-ms-transform: rotate(45deg);
 	-o-transform: rotate(45deg);
-	@include transition;
+	@include mixins.transition;
 }
 
 .mean-container .mean-nav ul li .mega-menu li a {

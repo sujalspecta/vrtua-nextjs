@@ -1,9 +1,12 @@
+@use "mixins";
+@use "variables";
+
 .bar-bg {
 	height: 5px;
 	background: #e7e7e7;
 	.progress-bar {
 		height: 5px;
-		background-color: $p1-clr;
+		background-color: variables.$p1-clr;
 		transition: width 1s linear;
 		width: 0%;
 	}
@@ -13,13 +16,13 @@
     flex-direction: column;
     display: flex;
     gap: 30px;
-    @include breakpoint(max-xl){
+    @include mixins.breakpoint(max-xl){
         gap: 20px;
     }
 }
 .project-big-thumb{
     direction: rtl;
-    @include breakpoint(max-lg){
+    @include mixins.breakpoint(max-lg){
         width: 100%;
         img{
             width: 100%;

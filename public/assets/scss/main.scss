@@ -11,60 +11,60 @@ Version: 1.0.0
 //>> Basic Start <<//
 
 //>> Mixins <<//
-@import "_mixins";
+@use "_mixins";
 //>> Variables <<//
-@import "_variables";
+@use "_variables";
 //>> Buttons <<//
-@import "_buttons";
+@use "_buttons";
 //>> Typography <<//
-@import "_typography";
+@use "_typography";
 //>> Basic End <<//
 
 //>> Template Section Style Start <<//
 
 //>> About <<//
-@import "_about";
+@use "_about";
 //>> Global <<//
-@import "_global";
+@use "_global";
 //>> Animation <<//
-@import "_animation";
+@use "_animation";
 //>> Brand <<//
-@import "_brand";
+@use "_brand";
 //>> Contact <<//
-@import "_contact";
+@use "_contact";
 //>> Cta <<//
-@import "_cta";
+@use "_cta";
 //>> Faq <<//
-@import "_faq";
+@use "_faq";
 //>> Feature <<//
-@import "_feature";
+@use "_feature";
 //>> Footer <<//
-@import "_footer";
+@use "_footer";
 //>> Header <<//
-@import "_header";
+@use "_header";
 //>> Helping <<//
-@import "_helping";
+@use "_helping";
 //>> Hero <<//
-@import "_hero";
+@use "_hero";
 //>> Marquee <<//
-@import "_marquee";
+@use "_marquee";
 //>> MeanMenu <<//
-@import "_meanmenu";
+@use "_meanmenu";
 //>> News <<//
-@import "_news";
+@use "_news";
 //>> Preloader <<//
-@import "_preloader";
+@use "_preloader";
 //>> Pricing <<//
-@import "_pricing";
+@use "_pricing";
 //>> Program <<//
-@import "_programs";
+@use "_programs";
 //>> Section <<//
-@import "_section";
+@use "_section";
 //>> Service <<//
-@import "_service";
+@use "_service";
 //>> Team <<//
-@import "_team";
+@use "_team";
 //>> Testimonial <<//
-@import "_testimonial";
+@use "_testimonial";
 
 //>> Template Section Style End <<//
